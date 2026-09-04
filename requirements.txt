@@ -1,0 +1,8 @@
+strands-sdk
+boto3
+opencv-python-headless
+numpy
+pillow
+python-dotenv
+requests
+scikit-image
