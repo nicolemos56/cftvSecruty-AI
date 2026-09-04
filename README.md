@@ -44,16 +44,13 @@ pip install -r requirements.txt
 
 Configure a AWS CLI ou as variáveis de ambiente usadas pelo Boto3. O projeto usa a região `us-east-1`.
 
-Crie um arquivo `.env` na raiz do projeto a partir do exemplo e preencha as credenciais do Telegram:
+Crie um arquivo `.env` na raiz do projeto a partir do exemplo e substitua os valores de exemplo pelas credenciais reais do Telegram:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-```text
-TELEGRAM_TOKEN=seu_token_do_bot
-TELEGRAM_CHAT_ID=seu_chat_id
-```
+Edite o arquivo `.env` e preencha `TELEGRAM_TOKEN` e `TELEGRAM_CHAT_ID`. O arquivo `.env.example` não é carregado automaticamente e não deve conter credenciais reais.
 
 O arquivo `.env` é ignorado pelo Git e nunca deve ser commitado.
 
