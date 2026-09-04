@@ -1,9 +1,12 @@
 import cv2
 import time
 import numpy as np
+from pathlib import Path
 from vision_utils import VisionProcessor
 from agent import SentinelAgent
 from notifier import send_telegram_alert
+
+IMAGE_DIR = Path(__file__).resolve().parent / "img"
 
 def main():
     print("\n" + "="*60)
@@ -77,7 +80,8 @@ def main():
                 if current_time - last_alert_time > COOLDOWN_DURATION:
                     print(f"🚨 NOVA ANOMALIA: {reason}. Enviando para IA e Telegram...")
 
-                    img_path = "alert.jpg"
+                    IMAGE_DIR.mkdir(exist_ok=True)
+                    img_path = str(IMAGE_DIR / "alert.jpg")
                     cv2.imwrite(img_path, frame)
 
                     # Chamada da IA e Telegram

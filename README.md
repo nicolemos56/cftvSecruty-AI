@@ -81,6 +81,7 @@ O sistema calcula o brilho e o nível de nitidez de cada frame. Depois que uma r
 - a similaridade fica abaixo de `0.50`.
 
 Quando uma anomalia é detectada, uma imagem é salva em `alert.jpg`, enviada para o agente de IA e encaminhada ao Telegram.
+As imagens capturadas são armazenadas em `src/img/` e não são versionadas pelo Git.
 
 ## Segurança
 
@@ -91,6 +92,7 @@ Nunca publique tokens do Telegram, chaves da AWS ou outros segredos no Git. As c
 ```text
 src/
   agent.py          # Diagnóstico pelo Amazon Bedrock
+  img/              # Imagens capturadas durante os alertas
   main.py           # Loop principal de monitoramento
   notifier.py       # Envio de alertas ao Telegram
   vision_monitor.py # Monitor simples de brilho
