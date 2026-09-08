@@ -1,4 +1,4 @@
-CFTVSECURITY-AI
+CCTVSECURITY-AI
 
 Sistema de monitoramento de CFTV por webcam com análise visual local, diagnóstico de anomalias por IA e notificações via Telegram.
 
